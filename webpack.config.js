@@ -34,7 +34,6 @@ const CONFIG = {
           replacement: ''
         }
       ]),
-      new ExtractTextPlugin('css/app.css'),
       new OptimizeCssAssetsPlugin({
         cssProcessorOptions: { discardComments: { removeAll: true } }
       }),
@@ -57,11 +56,9 @@ const CONFIG = {
     module: {
       rules: [
         {
-          test: /\.css$/,
-          use: ExtractTextPlugin.extract({
-            fallback: "style-loader",
-            use: "css-loader"
-          })
+          test: /\.s[ac]ss$/i,
+          loader: 'style-loader!css-loader!sass-loader',
+
         },
         {
           test: /\.(png|jpg|gif)$/,
@@ -71,7 +68,7 @@ const CONFIG = {
               options: {}
             }
           ]
-        }
+        },
       ],
     },
     devServer: {

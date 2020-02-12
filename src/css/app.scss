@@ -1,0 +1,173 @@
+/*
+ ***********************
+ *    IMPORT FONTS     *
+ ***********************
+*/
+
+@import url('../fonts/Roboto.css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700&display=swap');
+@import "normalize.css";
+
+
+$primary: #EE3D1B;
+$secondary: #D52047;
+
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(90deg, rgba($secondary, 0.8) 0%, rgba($primary, 0.8) 100%), url('/images/background.png');
+  background-size: cover;
+  display: grid;
+
+}
+
+header {
+  position: absolute;
+}
+
+#firstSection {
+
+  h1, p, div {
+    color: #fff;
+    font-family: 'Lato', sans-serif;
+  }
+  h1 {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 72px;
+    line-height: 86px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  #main-content {
+    display: flex;
+    flex-direction: column;
+    flex: auto;
+    justify-content: center;
+    align-items: center;
+    section {
+      max-width: 540px;
+      text-align: center;
+      margin: 2rem 0;
+      display: flex;
+      flex-direction: column;
+      h2 {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 150%;
+      }
+      .sign_up__button {
+        display: flex;
+        justify-content: center;
+        a {
+          @extend .fucking-links;
+          color: $primary;
+          padding: 1rem 3rem;
+          margin: 2rem 0;
+          text-transform: uppercase;
+          font-style: normal;
+          font-weight: 600;
+          font-size: 14px;
+          line-height: 17px;
+          border-radius: 6px;
+          background-color: #fff;
+        }
+      }
+
+    }
+  }
+}
+
+#secondSection {
+  background-color: #fff;
+}
+nav {
+  color: white;
+  font-family: 'Lato', sans-serif;
+  padding: 2rem 0;
+
+  display: grid;
+  grid-template-columns: repeat(3, minmax(200px, 1fr));
+  place-items: center;
+
+  @media only screen and (max-width: 768px) {
+    grid-template-columns: 1fr;
+    grid-template-rows: 3fr;
+
+  }
+
+
+  #logo {
+    display: inline-flex;
+    align-items: center;
+    * {
+      margin: 0 0.2rem;
+    }
+    p {
+      font-style: normal;
+      font-weight: bold;
+      font-size: 18px;
+      line-height: 22px;
+      text-transform: uppercase;
+    }
+  }
+
+  ul {
+    padding: 0;
+    display: inline-flex;
+    list-style: none;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
+    li {
+      margin: 0.2rem 1rem;
+      text-transform: uppercase;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 14px;
+      line-height: 17px;
+    }
+  }
+  #misc {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    justify-content: space-evenly;
+    .lang {
+      display: inline-flex;
+      align-items: center;
+      * {
+        margin: 0 0.2rem;
+      }
+    }
+    .auth {
+      a {
+        color: #fff;
+        @extend .fucking-links;
+        padding: 0.5rem 1rem;
+        text-transform: uppercase;
+        border: 1px solid #FFFFFF;
+        box-sizing: border-box;
+        border-radius: 6px;
+      }
+    }
+  }
+}
+
+
+.fucking-links {
+  text-decoration: none;
+
+  &:visited {
+    text-decoration: none;
+    color: inherit;
+  }
+}
+
