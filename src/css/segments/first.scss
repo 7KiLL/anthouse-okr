@@ -1,0 +1,79 @@
+
+#firstSection {
+
+  display: grid;
+  grid-template-rows: 1fr 4fr;
+  grid-template-columns: 1fr;
+  background: linear-gradient(90deg, rgba($secondary, 0.8) 0%, rgba($primary, 0.8) 100%), url('/images/background.png');
+  background-size: cover;
+
+  @media (max-width: $breakpoint-md){
+    background-position: center;
+  }
+
+  h1, p, div {
+    color: #fff;
+  }
+
+  h1 {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 4.5rem;
+    line-height: 5.375rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+
+    @media (max-width: $breakpoint-sm) {
+      font-size: 2rem;
+    }
+  }
+
+  min-height: 100vh;
+  @extend .flex-column;
+
+  #main-content {
+    display: flex;
+    flex-direction: column;
+    flex: auto;
+    justify-content: center;
+    align-items: center;
+
+    @media (max-width: $breakpoint-sm) {
+      padding: 0 1rem;
+    }
+
+    section {
+      max-width: 540px;
+      text-align: center;
+      margin: 2rem 0;
+      //@extend .flex-column;
+      //display: grid;
+      h2 {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 1.5rem;
+        line-height: 150%;
+      }
+
+      .sign_up__button {
+        display: flex;
+        justify-content: center;
+
+        a {
+          @extend .fucking-links;
+          color: $primary;
+          padding: 1rem 3rem;
+          margin: 2rem 0;
+          text-transform: uppercase;
+          font-style: normal;
+          font-weight: 600;
+          font-size: 1rem;
+          line-height: 1.125rem;
+          border-radius: 6px;
+          background-color: #fff;
+        }
+      }
+
+    }
+  }
+}

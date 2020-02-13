@@ -1,35 +1,20 @@
-https://www.figma.com/file/8F2q7k4Y15PJEc1aFTyO0g/CloudBudget-Freebie?node-id=1%3A2
+### [Figma](https://www.figma.com/file/8F2q7k4Y15PJEc1aFTyO0g/CloudBudget-Freebie?node-id=1%3A2) что я верстал
+### [Boilerplate](https://github.com/Dugnist/html5-boilerplate) откуда я всё взял
 
-
-# <p align="center"><a href='https://github.com/Dugnist/html5-boilerplate'><img width="200" src="http://css-live.ru/wp-content/uploads/2017/06/web1.png" alt="html5-boilerplate" /></a><br/> html5-boilerplate </p>
-
-### Get started
-
+# Getting Started
 ```
-  git clone https://github.com/Dugnist/html5-boilerplate.git my_project
-  cd my_project
-  npm i
-  npm start
+yarn 
+```
+or
+```
+npm install
 ```
 
-### Put your files into /src folder.
-
-Don't forget add to index.html this line:
+then run script
 ```
-  <script type="text/javascript" src="../build/app.js"></script>
+yarn start 
 ```
-
-### For build
-
+or
 ```
-  npm run build
+npm run start
 ```
-
-### Features
-
-- Lightweight, fast opened.
-- Webpack livereload separated config
-- Html5/Css3/JS(es6/vanilla)/images(png, jpg, gif, svg) optimization/minify.
-- Include 5 pure css media queries points and best normalize css practices.
-- Include all you needed html meta tags.
-- ES6 and browserify syntax support. (require, arrow func, let const etc...).

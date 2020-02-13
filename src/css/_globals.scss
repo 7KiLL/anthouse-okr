@@ -1,0 +1,67 @@
+
+.fucking-links {
+  text-decoration: none;
+
+  &:visited {
+    text-decoration: none;
+  }
+}
+
+a {
+  @extend .fucking-links
+}
+
+.flex {
+  flex-wrap: wrap;
+}
+
+.flex-column {
+  @extend .flex;
+  display: flex;
+  flex-direction: column;
+}
+
+.m0 {
+  margin: 0 !important;
+}
+
+.text--primary {
+  color: $primary;
+}
+
+.text--center {
+  text-align: center;
+}
+
+
+.title {
+  font-weight: 600;
+  font-size: 2.25rem;
+  line-height: 2.6875rem;
+  margin-bottom: 3rem;
+}
+
+
+%reset-Button {
+  border: none;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  overflow: visible;
+
+  background: transparent;
+
+  /* inherit font & color from ancestor */
+  color: inherit;
+  font: inherit;
+
+  /* Normalize `line-height`. Cannot be changed from `normal` in Firefox 4+. */
+  line-height: normal;
+
+  /* Corrects font smoothing for webkit */
+  -webkit-font-smoothing: inherit;
+  -moz-osx-font-smoothing: inherit;
+
+  /* Corrects inability to style clickable `input` types in iOS */
+  -webkit-appearance: none;
+}

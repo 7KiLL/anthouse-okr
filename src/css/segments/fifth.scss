@@ -1,0 +1,83 @@
+#fifthSection {
+  background-color: $accent;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 50px;
+  place-items: center;
+
+  padding: 4rem 15rem;
+
+  @media (max-width: $breakpoint-md) {
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr;
+
+    place-items: center;
+    text-align: center;
+    padding: 1rem 2rem;
+
+  }
+
+  .motivation {
+    > * {
+      margin: 3rem 0;
+    }
+
+    * {
+      color: #fff;
+    }
+
+    &__title {
+      font-size: 2.25rem;
+      line-height: 2.6875rem;
+    }
+
+    &__body {
+      line-height: 140%;
+    }
+
+    &__apps {
+      display: flex;
+      justify-content: start;
+      @media (max-width: $breakpoint-md) {
+        justify-content: center;
+      }
+
+      > * {
+        margin-right: 1.5rem;
+      }
+    }
+  }
+
+  .slider {
+    display: flex;
+    align-items: center;
+    position: relative;
+    top: 0;
+    left: 0;
+
+    @media (max-width: $breakpoint-sm) {
+      &__back_1, &__back_2 {
+        display: none;
+      }
+    }
+    &__main {
+      position: relative;
+      top: 0;
+      left: 0;
+      z-index: 3;
+    }
+
+    &__back_1 {
+      left: -44px;
+      position: absolute;
+      z-index: 2;
+    }
+
+    &__back_2 {
+      left: 100px;
+      position: absolute;
+      z-index: 1;
+    }
+  }
+}

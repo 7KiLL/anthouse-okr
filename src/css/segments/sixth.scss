@@ -1,0 +1,94 @@
+#sixthSection {
+  background-color: #fff;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 1fr;
+
+  padding: 8rem 10rem;
+
+  @media (max-width: $breakpoint-md) {
+    grid-template-rows: auto;
+    grid-template-columns: 1fr;
+    padding: 3rem 3rem;
+    grid-gap: 50px;
+
+  }
+
+
+  .text_box {
+    padding: 0 8rem;
+    height: fit-content;
+    @media (max-width: $breakpoint-md) {
+      padding: 0 1rem;
+
+    }
+  }
+
+  .inputs form {
+    input, select {
+      border: 1px solid #333;
+      border-radius: 6px;
+      padding: 1.25rem 2rem;
+    }
+
+    select {
+      flex: 1;
+      cursor: pointer;
+      position: relative;
+      display: flex;
+      overflow: hidden;
+      border-radius: .25em;
+      appearance: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      box-shadow: none;
+      overflow: hidden;
+      background: url("/images/select_arrow.svg") no-repeat 97% #fff;
+      color: #777;
+
+    }
+
+    display: grid;
+    grid-template-areas: "fn ln" "phone phone" "service service" "submit .";
+    grid-gap: 1rem;
+
+    @media (max-width: $breakpoint-md) {
+      grid-template-areas:"fn" "ln" "phone" "service" "submit";
+    }
+
+    input[name="first_name"] {
+      grid-area: fn;
+    }
+
+    input[name="last_name"] {
+      grid-area: ln;
+    }
+
+    input[name="phone"] {
+      grid-area: phone;
+    }
+
+    select[name="service"] {
+      grid-area: service;
+    }
+
+    button[type="submit"] {
+      @extend %reset-Button;
+      width: fit-content;
+      grid-area: submit;
+      background-color: $accent;
+      color: #fff;
+      outline: none;
+      padding: 1rem 3rem;
+      margin: 2rem 0;
+      text-transform: uppercase;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 0.875rem;
+      line-height: 1.0625rem;
+      cursor: pointer;
+      border-radius: 6px;
+    }
+
+  }
+}
